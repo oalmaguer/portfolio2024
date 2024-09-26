@@ -7,13 +7,6 @@ import { useState } from "react";
 import Navbar from "./navbar";
 import { Link } from "next-view-transitions";
 export default function PortfolioLayout() {
-  const [bgColor, setBgColor] = useState("#ffffff");
-  const [textColor, setTextColor] = useState("#000000");
-
-  const handleColorChange = (newBgColor: string, newTextColor: string) => {
-    setBgColor(newBgColor);
-    setTextColor(newTextColor);
-  };
   return (
     <div className="text-foreground">
       <div className="flex flex-col gap-4 h-fit">
@@ -38,7 +31,7 @@ export default function PortfolioLayout() {
               </span>
             </h2>
             <span className="text-6xl font-extralight">Software Developer</span>
-            <p className=" text-foreground text-xl w-3/4  ">
+            <p className=" text-foreground text-xl w-3/4">
               I'm passionate about creating beautiful and functional software.
             </p>
             <div className="flex gap-10">

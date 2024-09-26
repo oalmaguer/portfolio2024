@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "next-view-transitions";
-import { DarkMode } from "./darkmode";
 export default function Navbar() {
   return (
     <nav className="bg-slate-800 text-white shadow-sm sticky top-0 z-50">
