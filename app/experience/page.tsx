@@ -60,23 +60,23 @@ const experiences: ExperienceItem[] = [
 
 export default function Experience() {
   return (
-    <div className="mt-10 container mx-auto bg-background text-foreground flex flex-col h-screen">
+    <div className="mt-10 container mx-auto bg-background flex flex-col h-screen ">
       <div className="flex gap-10 flex-wrap justify-between">
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className="mt-4 rounded-lg w-80 p-5 bg-card border-1 shadow-md hover:shadow-lg border-gray-800 transition-opacity duration-300 hover:opacity-80"
+            className="mt-4 flex flex-col items-center bg-gray-100 rounded-lg w-80 p-5 bg-card border-1 shadow-md hover:shadow-lg border-gray-800 transition-opacity duration-300 hover:opacity-80"
           >
             <div className=" px-2 py-1 w-32 rounded-full flex">
               {exp.image && (
                 <img
                   src={exp.image}
-                  className="rounded-full mb-4 w-14 h-14 object-cover shadow-sm border-2 border-gray-100 hover:border-4 hover:border-gray-200 transition-all duration-100"
+                  className="mb-4 rounded w-full  object-cover shadow-sm border-2 border-gray-100 hover:border-4 hover:border-gray-200 transition-all duration-100"
                 />
               )}
             </div>
-            <h2 className="text-xl font-semibold text-primary">{exp.title}</h2>
-            <h3 className="scroll-m-20 text-md text-muted-foreground leading-6 ">
+            <h2 className="text-xl font-semibold text-black">{exp.title}</h2>
+            <h3 className="scroll-m-20 text-md text-muted- leading-6 text-gray-500">
               {exp.company}
             </h3>
 
