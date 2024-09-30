@@ -30,14 +30,22 @@ export default function Projects() {
       image: "/images/dog3.jpg",
       url: "https://amigos-zeta.vercel.app/",
     },
+    {
+      title: "Supabase / Angular Starter Kit",
+      description: [
+        "This project is a boilerplate for Angular applications using Supabase for authentication. It provides a basic setup for user registration, login, and toast notifications.",
+      ],
+      image: "/images/supaangular.jpeg",
+      url: "https://github.com/oalmaguer/supa-angular",
+    },
   ];
   return (
     <div>
-      <div className=" w-full mx-auto flex justify-center flex-wrap gap-20 mt-10">
+      <div className=" w-full mx-auto flex justify-center flex-wrap gap-20 mt-10  py-16">
         {projects.map((project) => (
           <div className="flex justify-center mt-4">
             <div className="max-w-[720px] mx-auto">
-              <div className="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96 bg-gray-100">
+              <div className="relative flex flex-col text-gray-700  shadow-md bg-clip-border rounded-xl w-96 bg-gray-100">
                 <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-96">
                   <img
                     src={project.image}

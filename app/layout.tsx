@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <ViewTransitions>
-      <html lang="en" className="bg-slate-900 text-white">
+      <html lang="en">
         <body
           className={`${geistMono.variable} ${geistMono.variable} antialiased flex flex-col h-screen`}
         >

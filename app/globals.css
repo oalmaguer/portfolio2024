@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 .flare {
   position: fixed;
   border: 2px solid #41e9ffc4;
@@ -35,7 +34,6 @@
     text-wrap: balance;
   }
 }
-
 @layer base {
   :root {
     --background: #1f2a3c;
@@ -94,7 +92,6 @@
 
 @layer base {
   html {
-    cursor: none;
 
     background: hsla(205, 46%, 10%, 1);
 
@@ -104,10 +101,8 @@
     
     background: -webkit-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
     
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1 );
   }
   * {
-    @apply border-border;
   }
   body {
   }
