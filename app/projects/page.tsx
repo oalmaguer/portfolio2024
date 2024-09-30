@@ -4,6 +4,7 @@ export default function Projects() {
     description: string[];
     image?: string;
     url?: string;
+    stack?: string[];
   }
   const projects: ProjectItem[] = [
     {
@@ -13,6 +14,7 @@ export default function Projects() {
       ],
       image: "/images/ufoapi.jpg",
       url: "https://rapidapi.com/almaguero95/api/ufo-aficionado-api",
+      stack: ["RapidAPI", "Node.js", "Express"],
     },
     {
       title: "Teraphy SAAS",
@@ -21,6 +23,7 @@ export default function Projects() {
       ],
       image: "/images/therapy.jpg",
       url: "https://terapiapp.vercel.app/",
+      stack: ["Supabase", "Angular", "SCSS"],
     },
     {
       title: "Dog Shelter",
@@ -29,6 +32,7 @@ export default function Projects() {
       ],
       image: "/images/dog3.jpg",
       url: "https://amigos-zeta.vercel.app/",
+      stack: ["NextJs", "TailwindCSS"],
     },
     {
       title: "Supabase / Angular Starter Kit",
@@ -37,6 +41,7 @@ export default function Projects() {
       ],
       image: "/images/supaangular.jpeg",
       url: "https://github.com/oalmaguer/supa-angular",
+      stack: ["Angular", "Supabase", "TailwindCSS"],
     },
   ];
   return (
@@ -63,6 +68,12 @@ export default function Projects() {
                   <p className="block font-sans text-md antialiased font-normal leading-normal">
                     {project.description.join(" ")}
                   </p>
+                  <div className="flex flex-wrap gap-2 font-bold">
+                    Stack:
+                    {project.stack?.map((tech) => (
+                      <span className="font-bold">{tech}</span>
+                    ))}
+                  </div>
                 </div>
                 <a target="_blank" href={project.url}>
                   <div className="p-6 -xl pt-0">
