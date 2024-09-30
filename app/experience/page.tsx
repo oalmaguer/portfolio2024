@@ -58,7 +58,7 @@ const experiences: ExperienceItem[] = [
 
 export default function Experience() {
   return (
-    <div className="mt-10 bg-background flex flex-col w-100 py-16">
+    <div className=" bg-background flex flex-col w-100 py-8">
       <div className="flex gap-10 flex-wrap justify-center w-100">
         {experiences.map((exp, index) => (
           <div
