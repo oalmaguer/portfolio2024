@@ -17,7 +17,7 @@ export default function Projects() {
     {
       title: "Teraphy SAAS",
       description: [
-        "A SAAS that helps doctors manage their patients and their health records.",
+        "A SAAS that helps doctors manage their patients and their health records. Credentials: Username: test@gmail.com Password: 123456",
       ],
       image: "/images/therapy.jpg",
       url: "https://terapiapp.vercel.app/",
