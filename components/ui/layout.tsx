@@ -26,7 +26,7 @@ export default function PortfolioLayout() {
           <div className="flex flex-col gap-7 text-center items-center w-3/4 text-white ">
             <h2 className="text-6xl font-bold ">
               Hi, I'm{" "}
-              <span className="bg-cyan-600 inline-block p-2 px-4 rounded text-white hover:bg-cyan-700 transition-all duration-300 ">
+              <span className="mt-4 bg-cyan-600 inline-block p-2 px-4 rounded text-white hover:bg-cyan-700 transition-all duration-300 ">
                 Oliver
               </span>
             </h2>

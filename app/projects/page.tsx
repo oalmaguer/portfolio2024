@@ -46,12 +46,12 @@ export default function Projects() {
   ];
   return (
     <div>
-      <div className=" w-full mx-auto flex justify-center flex-wrap gap-20 mt-10  py-16">
+      <div className=" w-full mx-auto flex justify-center flex-wrap gap-20 mt-10 py-16">
         {projects.map((project) => (
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-center mt-4 ">
             <div className="max-w-[720px] mx-auto">
-              <div className="relative flex flex-col text-gray-700  shadow-md bg-clip-border rounded-xl w-96 bg-gray-100">
-                <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-96">
+              <div className="flex flex-col text-gray-700  shadow-md bg-clip-border rounded-xl w-96 bg-gray-100 sm:4/5">
+                <div className=" mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-96 ">
                   <img
                     src={project.image}
                     alt="card-image"

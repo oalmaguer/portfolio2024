@@ -52,7 +52,7 @@ export default function Navbar() {
           </div>
           <div className="flex items-center space-x-4 ">
             <Link target="_blank" href="mailto:almaguero95@gmail.com">
-              <Button className="bg-cyan-700 shadow-md hover:shadow-lg hover:bg-cyan-800 text-white text-md">
+              <Button className="hidden bg-cyan-700 shadow-md hover:shadow-lg hover:bg-cyan-800 text-white text-md md:block hover:bg-cyan-900 transition-all duration-300">
                 Hire Me
               </Button>
             </Link>
@@ -138,6 +138,14 @@ export default function Navbar() {
             onClick={toggleMenu}
           >
             CV
+          </Link>
+          <Link
+            target="_blank"
+            href="mailto:almaguero95@gmail.com"
+            className="text-white text-3xl py-4"
+            onClick={toggleMenu}
+          >
+            Hire Me
           </Link>
         </div>
       )}
