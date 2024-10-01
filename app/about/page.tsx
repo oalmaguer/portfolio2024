@@ -1,26 +1,12 @@
 "use client";
-import { Button } from "@/components/ui/button";
 
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function AboutPage() {
   const [idx, setIdx] = useState(0);
-  const [opacity, setOpacity] = useState(1); // State for opacity
+  const [opacity, setOpacity] = useState(1);
   const images = [
     "/images/oli1.jpeg",
     "/images/oli2.jpeg",
@@ -28,22 +14,31 @@ export default function AboutPage() {
     "/images/oli5.jpeg",
     "/images/maza.jpg",
   ];
+
+  const imageRef = useRef<HTMLDivElement>(null);
   const next = () => {
     if (idx !== images.length - 1) {
-      setOpacity(0); // Start fade out
+      setOpacity(0);
       setTimeout(() => {
         setIdx(idx + 1);
-        setOpacity(1); // Fade in after changing image
-      }, 200); // Match this duration with your CSS transition duration
+        setOpacity(1);
+      }, 200);
     }
   };
   const prev = () => {
     if (idx !== 0) {
-      setOpacity(0); // Start fade out
+      setOpacity(0);
       setTimeout(() => {
         setIdx(idx - 1);
-        setOpacity(1); // Fade in after changing image
-      }, 200); // Match this duration with your CSS transition duration
+        setOpacity(1);
+      }, 200);
+    }
+  };
+
+  const scrollToImage = () => {
+    if (imageRef.current) {
+      setIdx(images.length - 1);
+      imageRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
   return (
@@ -51,7 +46,8 @@ export default function AboutPage() {
       <div className="flex flex-col lg:flex-row items-start justify-between gap-12 ">
         <div className="flex flex-col items-center justify-between w-full lg:w-1/2 lg:self-center">
           <div
-            className={`transition-opacity duration-300`}
+            ref={imageRef}
+            className={`transition-opacity duration-200`}
             style={{ opacity }}
           >
             <Image
@@ -59,17 +55,17 @@ export default function AboutPage() {
               alt="Profile"
               width={500}
               height={500}
-              className="rounded border-8 border-gray-100 shadow-lg lg:max-h-96 object-cover hover:scale-150 transition-all duration-300"
+              className="rounded border-8 border-gray-100 shadow-lg lg:max-h-96 object-cover hover:scale-110 transition-all duration-200"
             />
           </div>
           <div className="buttons flex gap-8 w-full justify-center mt-8">
             <ArrowLeft
-              onClick={prev}
-              className="cursor-pointer text-white border-2 border-white rounded-full w-7 h-7 hover:bg-white hover:text-black transition-all duration-300"
+              onClick={() => prev()}
+              className="cursor-pointer text-white border-2 border-white rounded-full w-7 h-7 hover:bg-white hover:text-black transition-all duration-200"
             />
             <ArrowRight
-              onClick={next}
-              className="cursor-pointer text-white border-2 border-white rounded-full w-7 h-7 hover:bg-white hover:text-black transition-all duration-300"
+              onClick={() => next()}
+              className="cursor-pointer text-white border-2 border-white rounded-full w-7 h-7 hover:bg-white hover:text-black transition-all duration-200"
             />
             {/* <Button onClick={prev}>Previous</Button> */}
             {/* <Button onClick={next}>Next</Button> */}
@@ -95,7 +91,7 @@ export default function AboutPage() {
             I'm from a beautiful coastal city called{" "}
             <span
               className="text-green-400 underline cursor-pointer"
-              onClick={() => setIdx(images.length - 1)}
+              onClick={scrollToImage}
             >
               Mazatlan, Sinaloa, Mexico
             </span>
