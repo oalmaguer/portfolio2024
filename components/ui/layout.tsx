@@ -8,7 +8,7 @@ import Navbar from "./navbar";
 import { Link } from "next-view-transitions";
 export default function PortfolioLayout() {
   return (
-    <div className="text-foreground py-16">
+    <div className="text-foreground py-8">
       <div className="flex flex-col gap-4 h-fit">
         {/* //start image */}
         <div className="flex items-center justify-center">
@@ -46,7 +46,7 @@ export default function PortfolioLayout() {
                 </Button>
               </Link>
             </div>
-            <div className="flex-auto sm:flex gap-10 border-2 border-slate-700 rounded-full p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="grid grid-cols-2  md:grid-cols-4 sm:flex gap-10 border-2 border-slate-700 rounded-full p-8 shadow-lg hover:shadow-xl transition-all duration-300">
               <Link
                 target="_blank"
                 href="https://www.instagram.com/olialmaguer/"

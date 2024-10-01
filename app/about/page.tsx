@@ -42,7 +42,7 @@ export default function AboutPage() {
     }
   };
   return (
-    <div className="container mx-auto py-16">
+    <div className="container mx-auto py-8">
       <div className="flex flex-col lg:flex-row items-start justify-between gap-12 ">
         <div className="flex flex-col items-center justify-between w-full lg:w-1/2 lg:self-center">
           <div

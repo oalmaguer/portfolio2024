@@ -46,7 +46,7 @@ export default function Projects() {
   ];
   return (
     <div>
-      <div className=" w-full mx-auto flex justify-center flex-wrap gap-20 mt-10 py-16">
+      <div className=" w-full mx-auto flex justify-center flex-wrap gap-20 py-8">
         {projects.map((project) => (
           <div className="flex justify-center mt-4 ">
             <div className="max-w-[720px] mx-auto">
