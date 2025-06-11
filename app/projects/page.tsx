@@ -2,9 +2,10 @@ export default function Projects() {
   interface ProjectItem {
     title: string;
     description: string[];
-    image?: string;
-    url?: string;
-    stack?: string[];
+    image: string;
+    url: string;
+    stack: string[];
+    isVideo?: boolean;
   }
   const projects: ProjectItem[] = [
     {
@@ -43,6 +44,16 @@ export default function Projects() {
       url: "https://github.com/oalmaguer/supa-angular",
       stack: ["Angular", "Supabase", "TailwindCSS"],
     },
+    {
+      title: "AI Gallery",
+      description: [
+        "This is a simple AI Gallery I developed to display images I created with different AI image models. All images are stored in a Supabase storage and fetched through the Supabase API.",
+      ],
+      image: "/images/aivideo.mp4",
+      url: "https://aigallery-ten.vercel.app/",
+      stack: ["NextJs", "Cursor",  "Supabase", "TailwindCSS"],
+      isVideo: true,
+    },
   ];
   return (
     <div>
@@ -52,11 +63,15 @@ export default function Projects() {
             <div className="max-w-[720px] mx-auto">
               <div className="flex flex-col text-gray-700  shadow-md bg-clip-border rounded-xl w-96 bg-gray-100 sm:4/5">
                 <div className=" mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-96 ">
-                  <img
-                    src={project.image}
-                    alt="card-image"
-                    className="object-cover w-full h-full"
-                  />
+                  {project.isVideo ? (
+                    <video src={project.image} autoPlay muted loop />
+                  ) : (
+                    <img
+                      src={project.image}
+                      alt="card-image"
+                      className="object-cover w-full h-full"
+                    />
+                  )}
                 </div>
                 <div className="p-6">
                   <div className="flex justify-between mb-2">
