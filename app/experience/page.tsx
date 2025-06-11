@@ -8,11 +8,11 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    title: "Software Developer",
+    title: "Senior Full Stack Developer",
     company: "Three Pillar Global.",
     period: "May 2022 - Currently working here",
     description: [
-      "Developed and maintained web applications using JavaScript, Angular and Figma.",
+      "Developed and maintained web applications using Java, Spring Boot, JavaScript, Angular and Figma. ",
       "Collaborated with cross-functional teams to define, design, and ship new features.",
       "Improved application performance and user experience.",
     ],

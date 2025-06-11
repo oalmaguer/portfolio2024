@@ -9,6 +9,16 @@ export default function Projects() {
   }
   const projects: ProjectItem[] = [
     {
+      title: "AI Gallery",
+      description: [
+        "This is a simple AI Gallery I developed to display images I created with different AI image models. All images are stored in a Supabase storage and fetched through the Supabase API.",
+      ],
+      image: "/images/aivideo.mp4",
+      url: "https://aigallery-ten.vercel.app/",
+      stack: ["NextJs", "Cursor",  "Supabase", "TailwindCSS"],
+      isVideo: true,
+    },
+    {
       title: "UFO Sightings API",
       description: [
         "API that provides information about UFO Sightings in the United States.",
@@ -17,15 +27,7 @@ export default function Projects() {
       url: "https://rapidapi.com/almaguero95/api/ufo-aficionado-api",
       stack: ["RapidAPI", "Node.js", "Express"],
     },
-    {
-      title: "Teraphy SAAS",
-      description: [
-        "A SAAS that helps doctors manage their patients and their health records. Credentials: Username: test@gmail.com Password: 123456",
-      ],
-      image: "/images/therapy.jpg",
-      url: "https://terapiapp.vercel.app/",
-      stack: ["Supabase", "Angular", "SCSS"],
-    },
+   
     {
       title: "Dog Shelter",
       description: [
@@ -44,15 +46,52 @@ export default function Projects() {
       url: "https://github.com/oalmaguer/supa-angular",
       stack: ["Angular", "Supabase", "TailwindCSS"],
     },
+
     {
-      title: "AI Gallery",
+      title: "Soccer Stats",
       description: [
-        "This is a simple AI Gallery I developed to display images I created with different AI image models. All images are stored in a Supabase storage and fetched through the Supabase API.",
+        "I created a simple soccer stats app for myself to display the latest results from Premier and MX league. The data is fetched from Rapid API soccer API https://api-football-v1.p.rapidapi.com/v3",
       ],
-      image: "/images/aivideo.mp4",
-      url: "https://aigallery-ten.vercel.app/",
+      image: "/images/soccer.png",
+      url: "https://v0-mexican-football-stats.vercel.app/",
       stack: ["NextJs", "Cursor",  "Supabase", "TailwindCSS"],
-      isVideo: true,
+    },
+    {
+      title: "World Database",
+      description: [
+        "This is a project I created to practice my skills with Three.js and React. It renders a 3d model of the earth with a small circle that represents each country in it's correct location. When you click on a country, it shows a modal with the country's information fetched from a free API https://restcountries.com/",
+      ],
+      image: "/images/world.png",
+      url: "https://threejsworld-gules.vercel.app/",
+      stack: ["NextJs", "TailwindCSS"],
+    },
+    {
+      title: "My Cat Website",
+      description: [
+        "This is a small project I created in the weekend to practice my Angular skills. It's a simple website to help me find my cat if it ever gets lost. ",
+      ],
+      image: "/images/checo.png",
+      url: "https://checolina.vercel.app/home",
+      stack: ["Angular"],
+    },
+    
+    {
+      title: "Find Comics",
+      description: [
+        "A site I created for myself to find comics about the superheroes I like. I am using the Marvel API to fetch the comics.",
+      ],
+      image: "/images/comic.png",
+      url: "https://marvelsti-sepia.vercel.app/",
+      stack: ["Angular"],
+    },
+    {
+      title: "Teraphy SAAS",
+      description: [
+        "A SAAS that helps doctors manage their patients and their health records. Credentials: Username: test@gmail.com Password: 123456",
+      ],
+      image: "/images/therapy.jpg",
+      url: "https://terapiapp.vercel.app/",
+      stack: ["Supabase", "Angular", "SCSS"],
     },
   ];
   return (
@@ -60,7 +99,7 @@ export default function Projects() {
       <div className=" w-full mx-auto flex justify-center flex-wrap gap-20 py-8">
         {projects.map((project) => (
           <div className="flex justify-center mt-4 ">
-            <div className="max-w-[720px] mx-auto">
+            <div className="max-w-[360px] mx-auto">
               <div className="flex flex-col text-gray-700  shadow-md bg-clip-border rounded-xl w-96 bg-gray-100 sm:4/5">
                 <div className=" mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-96 ">
                   {project.isVideo ? (
