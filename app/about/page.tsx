@@ -19,10 +19,8 @@ export default function AboutPage() {
   const next = () => {
     if (idx !== images.length - 1) {
       setOpacity(0);
-      setTimeout(() => {
         setIdx(idx + 1);
         setOpacity(1);
-      }, 200);
     }
   };
   const prev = () => {
